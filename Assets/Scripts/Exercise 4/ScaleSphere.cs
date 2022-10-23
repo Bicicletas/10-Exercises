@@ -11,7 +11,6 @@ public class ScaleSphere : MonoBehaviour
 
     private void Update()
     {
-
         sphere.transform.localScale = new Vector3(slider.value, slider.value, slider.value);
     }
 }
