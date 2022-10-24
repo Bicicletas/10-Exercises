@@ -14,8 +14,9 @@ public class AlphaChanger : MonoBehaviour
         color = sphereMat.color;
     }
 
-    public void AlphaValueChanger(float f)
+    public void AlphaController(float f)
     {
         color.a = f;
+        sphereMat.color = color;
     }
 }
