@@ -11,11 +11,8 @@ public class InputFieldLogic : MonoBehaviour
 
     private bool canAccept = false;
 
-    private void Update()
-    {
-        
-    }
-
+    // Function created for a button that displays an input filed text on a text UI if there is at least 1 character
+    // (to make sure that there isn't anything but blank spaces I set the input field values to not allow blanks (Alphanumeric))
     public void AcceptText()
     {
         if (inputField.text != "")

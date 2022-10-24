@@ -7,10 +7,12 @@ public class GenerateNumber : MonoBehaviour
 {
     public TextMeshProUGUI number;
 
-    private int lowNum = 0;
+    public int lowNum = 0;
 
-    private int highNum = 10000;
+    public int highNum = 10000;
 
+    // Function created for a button that changes the text value of UI text to a
+    // random number between a range of 2 numbers determinated in the inspector
     public void Generate()
     {
         number.text = $"{Random.Range(lowNum, highNum)}";
