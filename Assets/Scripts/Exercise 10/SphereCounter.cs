@@ -31,21 +31,22 @@ public class SphereCounter : MonoBehaviour
                 counterText.text = $"{counter}";
             }
         }
-        // Extra stuff to reset the game
-        if(counter == 30)
-        {
-            StartCoroutine(Reset());
-        }
     }
-    private IEnumerator Reset()
+    // Extra stuff to reset the game
+    public IEnumerator Reset()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         counter = 0;
         counterText.text = $"{counter}";
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         foreach (GameObject array in spheres)
         {
             array.SetActive(true);
         }
+    }
+
+    public void ResetButton()
+    {
+        StartCoroutine(Reset());
     }
 }
